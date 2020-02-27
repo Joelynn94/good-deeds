@@ -1,0 +1,60 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+}
+
+form.signup,
+form.login {
+  margin-top: 50px;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+a:hover {
+  color: #fff;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+.nav {
+  background-color: #3275a8;
+}
+
+.nav-left {
+  justify-self: start;
+  align-self: center;
+  padding: 1.5rem;
+}
+
+.nav-right {
+  justify-self: end;
+  align-self: center;
+  padding: 1.5rem;
+}
+
+.icons {
+  display: grid;
+  grid-template-columns: 2fr 2fr 1fr;
+}
+
+.nav-li {
+  padding: 1rem;
+  align-self: center;;
+}
+
+.li-less-padding {
+  padding: 0;
+}
+

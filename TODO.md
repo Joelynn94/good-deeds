@@ -66,6 +66,14 @@
 // - Add to cart button 
 //   1. Display to user that the item was added to the cart 
 
-# Public setup
+// Posing a new product page:
+// - Form: 
+//    1. Name of product
+//    2. Image of product
+//    3. Price of product 
+//    4. Description of product 
+//    5. Category of product?23
+
+# Public
 // Create public folder 
 // This is where we will generate our css, frontend JS, images 
