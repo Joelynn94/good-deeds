@@ -8,8 +8,7 @@ const path = require("path");
 const router = express.Router();
 
 router.get('/', function(req, res) {
-  // If the user already has an account send them to the members page
-  res.sendFile(path.join(__dirname, "../views/layout/main.handlebars"));
+  res.render('index');
 });
 
 module.exports = router;
