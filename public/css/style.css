@@ -41,6 +41,13 @@ img {
   grid-template-rows: 1fr 1fr 1fr;
 }
 
+.grid-container-search {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: 1fr 3fr;
+  margin-bottom: 1rem;
+}
+
 .nav {
   background-color: #3275a8;
   margin-bottom: 2rem;
@@ -55,7 +62,7 @@ img {
 .nav-right {
   justify-self: end;
   align-self: center;
-  padding: 1.5rem;
+  padding-right: 1.5rem;
 }
 
 .icons {
@@ -120,6 +127,17 @@ img {
   border-left: 1px solid black;
   padding-left: .5rem;
   color: #3275a8;
+}
+
+.search {
+  display: flex;
+}
+
+.input-group-prepend {
+  padding: .375rem .75rem;
+  background-color: #3275a8;
+  color: #fff;
+  border-radius: .25rem;
 }
 
 
