@@ -29,18 +29,39 @@ img {
   width: 100%;
 }
 
-.grid-container {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
+/* Navigation styles */
+.nav {
+  background-color: #3275a8;
+  margin-bottom: 2rem;
 }
 
-.grid-container-products {
+.nav-left {
+  justify-self: center;
+  align-self: center;
+  padding: 1.5rem;
+}
+
+.nav-right {
+  justify-self: center;
+  align-self: center;
+}
+
+.icons {
   display: grid;
-  grid-gap: .5rem;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
 }
 
+.nav-li {
+  padding: .25rem;
+  align-self: center;;
+}
+
+.li-neg-margin {
+  padding: 0;
+  margin-left: -15px;
+}
+
+/* Grid setup for search section */
 .grid-container-search {
   display: grid;
   grid-gap: 1rem;
@@ -48,43 +69,27 @@ img {
   margin-bottom: 1rem;
 }
 
-.nav {
-  background-color: #3275a8;
-  margin-bottom: 2rem;
-}
-
-.nav-left {
-  justify-self: start;
-  align-self: center;
-  padding: 1.5rem;
-}
-
-.nav-right {
-  justify-self: end;
-  align-self: center;
-  padding-right: 1.5rem;
-}
-
-.icons {
+/* Grid setup for navigation section */
+.grid-container-navigation {
   display: grid;
-  grid-template-columns: 2fr 2fr 1fr;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
 }
 
-.nav-li {
-  padding: 1rem;
-  align-self: center;;
+/* Center cards on mobile */
+.grid-container-products {
+  display: grid;
 }
 
-.li-less-padding {
-  padding: 0;
-}
-
+/* Product card styles */
 .card {
-  max-width: 400px;
+  max-width: 28rem;
   /* Add shadows to create the "card" effect */
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   transition: 0.3s;
   border-radius: 5px; /* 5px rounded corners */
+  justify-self: center;
+  margin-bottom: 1.25rem;
 }
 
 /* On mouse-over, add a deeper shadow */
@@ -101,10 +106,6 @@ img {
   border-radius: 5px 5px 0 0;
   height: 16rem;
   object-fit: fill;
-}
-
-.position-relative {
-  position: relative;
 }
 
 .card-cart {
@@ -129,6 +130,7 @@ img {
   color: #3275a8;
 }
 
+/* Search input styles */
 .search {
   display: flex;
 }
@@ -140,5 +142,64 @@ img {
   border-radius: .25rem;
 }
 
+
+/* Media screen for tablet sizes */
+@media only screen and (min-width: 768px) {
+  .grid-container-navigation {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr;
+  }
+
+  .grid-container-products {
+    display: grid;
+    grid-gap: .5rem;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  .card {
+    width: 25rem;
+  }
+
+  .nav-left {
+    justify-self: start;
+    align-self: center;
+    padding: 1.5rem;
+  }
+  
+  .nav-right {
+    justify-self: end;
+    align-self: center;
+  }
+}
+
+/* Media screen sizes for laptop sizes */
+@media only screen and (min-width: 1024px) {
+  .grid-container-products {
+    display: grid;
+    grid-gap: .5rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+
+  .card {
+    width: 18rem;
+  }
+}
+
+/* Media screen sizes for desktop sizes */
+@media only screen and (min-width: 1024px) {
+  .grid-container-products {
+    display: grid;
+    grid-gap: 1.5rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+
+  .card {
+    width: 22rem;
+  }
+}
 
 
