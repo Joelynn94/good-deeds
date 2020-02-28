@@ -1,98 +1,25 @@
 {{!-- Navigation --}}
 <nav class="nav grid-container-navigation">
-  <div class="nav-left">
-    <ul>
-      <li>
-        <a href="/">Good Deeds</a>
-      </li>
-    </ul>
-  </div>
-
-  <div class="nav-right">
-    <ul class="icons">
-      <li class="nav-li">
-        <a href=""><i class="fal fa-plus"></i> Add Product</a>
-      </li>
-      <li class="nav-li">
-        <a href=""><i class="fal fa-shopping-cart"></i> My Cart</a>
-      </li>
-      <li class="nav-li li-neg-margin">
-        <a href=""><i class="fal fa-user"></i> Login</a>
-      </li>
-    </ul>
-  </div>
+  {{> nav/navigation }}
 </nav>
 {{!-- End Navigation --}}
+
+{{!-- Search Input --}}
 <div class="container">
   <div class="grid-container-search">
-      <div class="dropdown dropdown-button">
-        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Category
-        </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <a class="dropdown-item" href="#">Something else here</a>
-        </div>
-      </div>
-
-    <div class="search">
-        <input class="form-control form-control-dark" type="text" placeholder="Search" aria-label="Search">
-        <div class="input-group-prepend">
-          <span><i class="fal fa-search"></i></span>
-        </div>
-    </div>
+    {{> search/search }}
   </div>
 </div>
+{{!-- End Search Input --}}
 
 {{!-- Product Card --}}
 <div class="container">
   <div class="grid-container-products">
-    <div class="card">
-      <div class="position-relative">
-        <img class="card-img" src="/img/backpack.jpeg" alt="Backpack">
-        <div class="card-cart">
-          <li>
-            <a href=""><i class="fal fa-shopping-cart cart-black"></i><span class="cart-span">Add to Cart</span></a>
-          </li>
-        </div>
-      </div>
-      <div class="card-text">
-        <h4><strong>Backpack</strong></h4>
-        <p>Price: <span>$9.99</span></p>
-      </div>
-    </div> 
+    {{> card/card }}
+ 
+    {{> card/card2 }}
 
-    <div class="card">
-      <div class="position-relative">
-        <img class="card-img" src="/img/blanket.jpeg" alt="Blanket">
-        <div class="card-cart">
-        <li>
-          <a href=""><i class="fal fa-shopping-cart cart-black"></i><span class="cart-span">Add to Cart</span></a>
-        </li>
-      </div>
-      </div>
-      <div class="card-text">
-        <h4><strong>Blanket</strong></h4>
-        <p>Price: <span>$5.99</span></p>
-      </div>
-    </div> 
-
-    <div class="card">
-      <div class="position-relative">
-        <img class="card-img" src="/img/gloves.jpeg" alt="Blanket">
-        <div class="card-cart">
-        <li>
-          <a href=""><i class="fal fa-shopping-cart cart-black"></i><span class="cart-span">Add to Cart</span></a>
-        </li>
-      </div>
-      </div>
-      <div class="card-text">
-        <h4><strong>Blanket</strong></h4>
-        <p>Price: <span>$5.99</span></p>
-      </div>
-    </div> 
-
+    {{> card/card3 }}
   </div>
 </div>
 {{!-- End Product Cards --}}
