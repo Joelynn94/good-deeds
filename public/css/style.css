@@ -38,6 +38,7 @@ img {
   display: grid;
   grid-gap: .5rem;
   grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
 }
 
 .nav {
@@ -91,6 +92,8 @@ img {
 
 .card-img {
   border-radius: 5px 5px 0 0;
+  height: 16rem;
+  object-fit: fill;
 }
 
 .position-relative {
