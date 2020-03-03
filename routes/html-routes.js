@@ -15,9 +15,9 @@ router.get('/cart', function(req, res) {
   res.render('cart');
 });
 
-// Here is the route for the post form
-router.get('/post', function(req, res) {
-  return res.render('post');
+// Here is the route for the donate form
+router.get('/donate', function(req, res) {
+  res.render('donate');
 });
 
 module.exports = router;

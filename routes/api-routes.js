@@ -46,4 +46,16 @@ module.exports = function(app) {
       });
     }
   });
+    // Route for Donation form
+    app.post("/api/donate", function(req, res) {
+      db.Donation.create({
+        description: req.body.description,
+      })
+        .then(function() {
+          res.reload();
+        })
+        .catch(function(err) {
+          res.status(401).json(err);
+        });
+    });
 };
