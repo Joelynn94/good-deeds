@@ -61,3 +61,7 @@
 .cart-details > p {
   justify-self: end;
 }
+
+.wide-btn {
+  width: 180px;
+}
