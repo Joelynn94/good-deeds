@@ -28,4 +28,9 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../public/members.html"));
   });
 
+  // Here is the route for the post form
+  router.get('/post', function(req, res) {
+    return res.render('post');
+  });
+
 };
