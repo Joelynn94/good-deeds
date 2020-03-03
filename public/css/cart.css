@@ -46,3 +46,18 @@
 .product-total > p {
   margin: 0;
 }
+
+.cart-details {
+  display: grid;
+  margin-top: 2rem;
+}
+
+.cart-details > a {
+  padding: 0; 
+  justify-self: end;
+  margin-bottom: .5rem;
+}
+
+.cart-details > p {
+  justify-self: end;
+}
