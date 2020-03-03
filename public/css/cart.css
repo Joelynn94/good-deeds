@@ -1,0 +1,48 @@
+.product-row {
+  display: grid;
+}
+
+.product-inner {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+  grid-gap: 2rem;
+  padding: 1rem;
+  background-color: #dee2e6;
+}
+
+.product-inner-headings {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+  grid-gap: 2rem;
+  padding: 1rem;
+}
+
+.product-image {
+  width: 180px;
+}
+
+.product-image > a {
+  padding: 0;
+}
+
+.product-image-heading {
+  width: 180px;
+}
+
+.product-name,
+.product-price,
+.product-qty,
+.product-remove,
+.product-total {
+  align-self: center;
+}
+
+.product-name > p,
+.product-price > p,
+.product-qty > p,
+.product-remove > p,
+.product-total > p {
+  margin: 0;
+}
