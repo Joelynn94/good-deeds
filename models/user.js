@@ -19,11 +19,6 @@ module.exports = function(sequelize, DataTypes) {
     }
     
   });
-  // association for user to donation
-  User.associate = function(models) {
-    // Associating User with the Donation
-    User.hasMany(models.Donation, {
- });
   // Creating a custom method for our User model. This will check if an unhashed password entered by the user can be compared to the hashed password stored in our database
   User.prototype.validPassword = function(password) {
     return bcrypt.compareSync(password, this.password);
