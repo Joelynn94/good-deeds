@@ -1,0 +1,205 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+li {
+  list-style-type: none;
+  margin: 0;
+}
+
+form.signup,
+form.login {
+  margin-top: 50px;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+  padding: .5rem;
+}
+
+a:hover {
+  color: #fff;
+}
+
+img {
+  width: 100%;
+}
+
+/* Navigation styles */
+.nav {
+  background-color: #3275a8;
+  margin-bottom: 2rem;
+}
+
+.nav-left {
+  justify-self: center;
+  align-self: center;
+  padding: 1.5rem;
+}
+
+.nav-right {
+  justify-self: center;
+  align-self: center;
+}
+
+.icons {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.nav-li {
+  padding: .25rem;
+  align-self: center;;
+}
+
+.li-neg-margin {
+  padding: 0;
+  margin-left: -15px;
+}
+
+/* Grid setup for search section */
+.grid-container-search {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: 1fr 3fr;
+  margin-bottom: 1rem;
+}
+
+/* Grid setup for navigation section */
+.grid-container-navigation {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+/* Center cards on mobile */
+.grid-container-products {
+  display: grid;
+}
+
+/* Product card styles */
+.card {
+  max-width: 28rem;
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  border-radius: 5px; /* 5px rounded corners */
+  justify-self: center;
+  margin-bottom: 1.25rem;
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+/* Add some padding inside the card container */
+.card-text {
+  padding: 2rem .5rem;
+}
+
+.card-img {
+  border-radius: 5px 5px 0 0;
+  height: 16rem;
+  object-fit: fill;
+}
+
+.card-cart {
+  background-color: #fff;
+  position: absolute;
+  bottom: -8px;
+  right: 31%;
+  border-radius: 5px; /* 5px rounded corners */
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  padding: .25rem .5rem;
+}
+
+.cart-span,
+.cart-black {
+  color: black;
+}
+
+.cart-span {
+  margin-left: .5rem;
+  border-left: 1px solid black;
+  padding-left: .5rem;
+  color: #3275a8;
+}
+
+/* Search input styles */
+.search {
+  display: flex;
+}
+
+.input-group-prepend {
+  padding: .375rem .75rem;
+  background-color: #3275a8;
+  color: #fff;
+  border-radius: .25rem;
+}
+
+
+/* Media screen for tablet sizes */
+@media only screen and (min-width: 768px) {
+  .grid-container-navigation {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr;
+  }
+
+  .grid-container-products {
+    display: grid;
+    grid-gap: .5rem;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  .card {
+    width: 25rem;
+  }
+
+  .nav-left {
+    justify-self: start;
+    align-self: center;
+    padding: 1.5rem;
+  }
+  
+  .nav-right {
+    justify-self: end;
+    align-self: center;
+  }
+}
+
+/* Media screen sizes for laptop sizes */
+@media only screen and (min-width: 1024px) {
+  .grid-container-products {
+    display: grid;
+    grid-gap: .5rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+
+  .card {
+    width: 18rem;
+  }
+}
+
+/* Media screen sizes for desktop sizes */
+@media only screen and (min-width: 1024px) {
+  .grid-container-products {
+    display: grid;
+    grid-gap: 1.5rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+
+  .card {
+    width: 22rem;
+  }
+}
+
+
