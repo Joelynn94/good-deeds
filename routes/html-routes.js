@@ -15,4 +15,9 @@ router.get('/cart', function(req, res) {
   res.render('cart');
 });
 
+// Here is the route for the post form
+router.get('/post', function(req, res) {
+  return res.render('post');
+});
+
 module.exports = router;
