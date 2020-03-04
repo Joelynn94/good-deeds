@@ -5,25 +5,32 @@
 {{!-- End Navigation --}}
 
 <div class="container">
-    <div class="row mt-4">
-      <div class="col-md-4">
-        <div class="form-group">
-          <select class="custom-select" id="category">
-            <option selected value="">All Categories</option>
-            <option value="School Supplies">School Supplies</option>
-            <option value="Shoes">Shoes</option>
-            <option value="Personal Hygene">Personal Hygene</option>
-            <option value="Professional Outfits">Professional Outfits</option>
-            <option value="Winter Clothes">Winter Clothes</option>
-          </select>
+    <div class="row">
+      <div class="row">
+        <div class="col-sm-2 mt-4">
+          <a class="btn btn-light" href="/blog">Go to Blog</a>
         </div>
       </div>
-      <div class="col-md-2">
-        <a class="btn btn-light" href="/cms">New Post</a>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-12 blog-container">
+      <div class="col-md-5 offset-md-3">
+        <form id="cms">
+          <div class="form-group">
+            <label for="title">Title:</label>
+            <input type="text" class="form-control" id="title">
+            <br />
+            <label for="body">Body:</label>
+            <textarea class="form-control" rows="10" id="body"></textarea>
+            <div class="form-group">
+              <label for="category">Select Category:</label>
+              <select class="custom-select" id="category">
+                <option value="Personal">Personal</option>
+                <option value="Product Review">Product Review</option>
+                <option value="Political">Political</option>
+              </select>
+            </div>
+            <br />
+            <button type="submit" class="btn btn-success submit btn-lg">Submit</button>
+          </div>
+        </form>
       </div>
     </div>
   </div>
