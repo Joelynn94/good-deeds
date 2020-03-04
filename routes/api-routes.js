@@ -48,7 +48,7 @@ module.exports = function(app) {
   });
 
   // Route to post new Products
-  app.post("/api/donate", function(req, res) {
+  app.post("/api/donations", function(req, res) {
     const donateReq = req.body;
     console.log(donateReq)
     db.Product.create({
@@ -65,7 +65,7 @@ module.exports = function(app) {
   app.get("/", function(req, res) {
     db.Product.findAll()
       .then(function(data) {
-        console.log(data[0].dataValues)
+        //console.log(data[0].dataValues)
         res.render('index', { Product: data })
       })
   })
