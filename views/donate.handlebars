@@ -5,11 +5,23 @@
 {{!-- End Navigation --}}
 
 <div class="container">
-  <form id= 'donationForm'> 
-      <div class="form-group">
-      <label for="exampleFormControlTextarea1">Example textarea</label>
-      <textarea class="form-control" id="itemDescription" rows="3"></textarea>
+    <div class="row mt-4">
+      <div class="col-md-4">
+        <div class="form-group">
+          <select class="custom-select" id="category">
+            <option selected value="">All Categories</option>
+            <option value="Personal">Personal</option>
+            <option value="Product Review">Product Review</option>
+            <option value="Political">Political</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-md-2">
+        <a class="btn btn-light" href="/cms">New Post</a>
+      </div>
     </div>
-    <button type="submit" class="btn btn-primary">Submit Donation</button>
-  </form>
-</div>
+    <div class="row">
+      <div class="col-md-12 blog-container">
+      </div>
+    </div>
+  </div>
