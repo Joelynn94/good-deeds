@@ -46,7 +46,7 @@ module.exports = function(app) {
       });
     }
   });
-  
+
   // Route to post new Products
   app.post("/api/donate", function(req, res){
     const donateReq = req.body;
@@ -60,5 +60,18 @@ module.exports = function(app) {
     }).then(function(data){
       res.json(data);
     })
+  })
+
+  app.get("/", function(req, res){
+    db.Product.findAll()
+      .then(function(data){
+        res.render('index', { 
+          productName: data,
+          productDesc: data, 
+          productPrice: data, 
+          productCategory: data, 
+          productQuantity: data, 
+         })
+      })
   })
 };

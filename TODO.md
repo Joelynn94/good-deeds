@@ -66,7 +66,7 @@
 // - Add to cart button 
 //   1. Display to user that the item was added to the cart 
 
-// Posing a new product page:
+// Posting a new product page:
 // - Form: 
 //    1. Name of product
 //    2. Image of product
