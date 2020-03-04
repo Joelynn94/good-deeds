@@ -140,6 +140,7 @@ img {
   background-color: #3275a8;
   color: #fff;
   border-radius: .25rem;
+  height: calc(1.5em + .75rem + 2px);
 }
 
 
