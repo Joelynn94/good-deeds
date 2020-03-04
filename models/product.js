@@ -8,37 +8,31 @@ productImage
 */
 
 module.exports = function(sequelize, DataTypes) {
-    var Product = sequelize.define("Product", {
+    const Product = sequelize.define("Product", {
       // Giving the Product model a name of type STRING
       productName: {
           type: DataTypes.STRING,
-          allowNull: false,
-          validate: {}
+          allowNull: false
       },
       productImage: {
           type: DataTypes.STRING,
-          allowNull: true,
-          validate: {}
+          allowNull: true
       },
       productDesc: {
           type: DataTypes.TEXT,
-          allowNull: false,
-          validate: {}
+          allowNull: false
       },
       productPrice: {
           type: DataTypes.DECIMAL(10, 2),
-          allowNull: false,
-          validate: {}
+          allowNull: false
       },
       productCategory: {
           type: DataTypes.STRING,
-          allowNull: false,
-          validate: {}
+          allowNull: false
       },
       productQuantity: {
           type: DataTypes.INTEGER,
-          allowNull: false,
-          validate: {}
+          allowNull: false
       }
     });
   

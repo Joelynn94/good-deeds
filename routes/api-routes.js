@@ -46,16 +46,19 @@ module.exports = function(app) {
       });
     }
   });
-    // Route for Donation form
-    app.post("/api/donate", function(req, res) {
-      db.Donation.create({
-        description: req.body.description,
-      })
-        .then(function() {
-          res.reload();
-        })
-        .catch(function(err) {
-          res.status(401).json(err);
-        });
-    });
+  
+  // Route to post new Products
+  app.post("/api/donate", function(req, res){
+    const donateReq = req.body;
+    console.log(donateReq)
+    db.Product.create({
+      productName: donateReq.productName,
+      productDesc: donateReq.productDesc, 
+      productPrice: donateReq.productPrice, 
+      productCategory: donateReq.productCategory, 
+      productQuantity: donateReq.productQuantity, 
+    }).then(function(data){
+      res.json(data);
+    })
+  })
 };
