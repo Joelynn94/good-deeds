@@ -160,7 +160,7 @@ img {
   }
 
   .card {
-    width: 25rem;
+    width: 20rem;
   }
 
   .nav-left {
@@ -176,7 +176,7 @@ img {
 }
 
 /* Media screen sizes for laptop sizes */
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 998px) {
   .grid-container-products {
     display: grid;
     grid-gap: .5rem;
@@ -190,7 +190,7 @@ img {
 }
 
 /* Media screen sizes for desktop sizes */
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1200px) {
   .grid-container-products {
     display: grid;
     grid-gap: 1.5rem;
