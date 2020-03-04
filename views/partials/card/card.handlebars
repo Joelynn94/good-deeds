@@ -1,4 +1,4 @@
-{{#each product}}
+{{#each Product}}
   <div class="card">
     <div class="position-relative">
       <img class="card-img" src="/img/backpack.jpeg" alt="Backpack">
@@ -9,8 +9,8 @@
       </div>
     </div>
     <div class="card-text">
-      <h4><strong>{{productName}}</strong></h4>
-      <p>Price: <span>{{productPrice}}</span></p>
+      <h4><strong>{{dataValues.productName}}</strong></h4>
+      <p>Price: <span>{{dataValues.productPrice}}</span></p>
     </div>
   </div> 
 {{/each}}

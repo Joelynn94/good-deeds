@@ -48,7 +48,7 @@ module.exports = function(app) {
   });
 
   // Route to post new Products
-  app.post("/api/donate", function(req, res){
+  app.post("/api/donate", function(req, res) {
     const donateReq = req.body;
     console.log(donateReq)
     db.Product.create({
@@ -57,21 +57,16 @@ module.exports = function(app) {
       productPrice: donateReq.productPrice, 
       productCategory: donateReq.productCategory, 
       productQuantity: donateReq.productQuantity, 
-    }).then(function(data){
+    }).then(function(data) {
       res.json(data);
     })
   })
 
-  app.get("/", function(req, res){
+  app.get("/", function(req, res) {
     db.Product.findAll()
-      .then(function(data){
-        res.render('index', { 
-          productName: data,
-          productDesc: data, 
-          productPrice: data, 
-          productCategory: data, 
-          productQuantity: data, 
-         })
+      .then(function(data) {
+        console.log(data[0].dataValues)
+        res.render('index', { Product: data })
       })
   })
 };
