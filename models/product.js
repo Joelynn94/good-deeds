@@ -20,7 +20,8 @@ module.exports = function(sequelize, DataTypes) {
       },
       productDesc: {
           type: DataTypes.TEXT,
-          allowNull: false
+          allowNull: true,
+          defaultValue: "No Description"
       },
       productPrice: {
           type: DataTypes.DECIMAL(10, 2),
@@ -33,13 +34,18 @@ module.exports = function(sequelize, DataTypes) {
       productQuantity: {
           type: DataTypes.INTEGER,
           allowNull: false
+      },
+      productInCart: {
+        type: DataTypes.BOOLEAN,
+        allowNull: false,
+        defaultValue: false
       }
     });
   
     Product.associate = function(models) {
       // Associating Product with Posts
       // When an Product is deleted, also delete any associated Posts
-      Product.hasMany(models.Post, {
+      Product.hasMany(models.Cart, {
         onDelete: "cascade"
       });
     };

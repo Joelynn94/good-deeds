@@ -93,7 +93,26 @@
       <button type="button" class="btn btn-outline-danger wide-btn">Clear Cart</button>
     </a>
 
-    <p><strong>Cart Total: </strong><span>$9.99</span></p>
+    <p><strong>Cart Total: $</strong><span>19.98</span></p>
   </div>
 </div>
 
+{{!--
+
+{{#each Product}}
+  <div class="card">
+    <div class="position-relative">
+      <img class="card-img" src="/img/backpack.jpeg" alt="Backpack">
+      <div class="card-cart" data-id={{ id }}>
+        <li>
+          <a href=""><i class="fal fa-shopping-cart cart-black"></i><span class="cart-span">Add to Cart</span></a>
+        </li>
+      </div>
+    </div>
+    <div class="card-text">
+      <h4><strong>{{dataValues.productName}}</strong></h4>
+      <p>Price: <span>{{dataValues.productPrice}}</span></p>
+    </div>
+  </div> 
+{{/each}}
+ --}}
