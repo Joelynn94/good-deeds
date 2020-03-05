@@ -20,9 +20,9 @@ router.get('/donate', function(req, res) {
   res.render('donate');
 });
 
-// Here is the route for the description form
-router.get('/description', function(req, res) {
-  res.render('description');
+// Here is the route for the details form
+router.get('/details', function(req, res) {
+  res.render('details');
 });
 
 

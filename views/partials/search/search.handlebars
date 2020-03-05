@@ -16,3 +16,21 @@
       <span><i class="fal fa-search"></i></span>
     </div>
 </div>
+
+{{!-- dropdown --}}
+{{!-- <script>
+  $(document).ready(function () { 
+    $("#category").change(function() {
+     var selectedOption = $(this).val() 
+     $(".grid-container-products").empty()
+     {{Product.findAll({where:{
+        productCategory:selectedOption 
+       }
+     }).then(function (res) {
+
+
+     })
+     }}
+    }
+  }) 
+</script> --}}
