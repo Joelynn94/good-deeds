@@ -20,6 +20,29 @@
     {{> card/card2 }}
 
     {{> card/card3 }}
+    {{!-- dropdown --}}
+
+{{!-- <script>
+  $(document).ready(function () { 
+    $("#category").change(function() {
+      {{!-- is selected option inscope? look at syntax --}}
+     var selectedOption = $(this).val() 
+     $(".grid-container-products").empty()
+     {{!-- {{Product.findAll({where:{ --}}
+        productCategory:selectedOption 
+       }
+     }).then(function (res) {
+       {{> card/card }}
+ 
+        {{> card/card2 }}
+
+          {{> card/card3 }}
+
+     })
+     }}
+    }
+  }) 
+</script> --}}
   </div>
 </div>
 {{!-- End Product Cards --}}
