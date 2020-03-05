@@ -20,7 +20,8 @@ module.exports = function(sequelize, DataTypes) {
       },
       productDesc: {
           type: DataTypes.TEXT,
-          allowNull: false
+          allowNull: true,
+          defaultValue: "No Description"
       },
       productPrice: {
           type: DataTypes.DECIMAL(10, 2),

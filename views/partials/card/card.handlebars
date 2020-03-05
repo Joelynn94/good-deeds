@@ -1,8 +1,8 @@
 {{#each Product}}
   <div class="card">
     <div class="position-relative">
-      <img class="card-img" src="/img/backpack.jpeg" alt="Backpack">
-      <div class="card-cart">
+      <img class="card-img" data-img={{dataValues.productImage}} src="/img/backpack.jpeg" alt="Backpack">
+      <div class="card-cart" data-id={{dataValues.id}}>
         <li>
           <a href=""><i class="fal fa-shopping-cart cart-black"></i><span class="cart-span">Add to Cart</span></a>
         </li>
