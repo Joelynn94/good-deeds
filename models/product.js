@@ -36,6 +36,7 @@ module.exports = function(sequelize, DataTypes) {
       },
       productInCart: {
         type: DataTypes.BOOLEAN,
+        allowNull: false,
         defaultValue: false
       }
     });
@@ -43,7 +44,7 @@ module.exports = function(sequelize, DataTypes) {
     Product.associate = function(models) {
       // Associating Product with Posts
       // When an Product is deleted, also delete any associated Posts
-      Product.hasMany(models.Post, {
+      Product.hasMany(models.Cart, {
         onDelete: "cascade"
       });
     };

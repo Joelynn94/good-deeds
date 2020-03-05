@@ -8,17 +8,18 @@ CREATE TABLE  products (
     productPrice DECIMAL,
     productImage VARCHAR(255),
     productQuantity INT,
+    productInCart BOOLEAN,
     PRIMARY KEY (id)
 );
 
-CREATE TABLE user (
+CREATE TABLE users (
     id INT NOT NULL AUTO_INCREMENT,
     userName VARCHAR (255),
-    userPassword ,
+    userPassword VARCHAR(255),
     PRIMARY KEY (id)
 );
 
-CREATE TABLE cart (
+CREATE TABLE carts (
     id INT NOT NULL AUTO_INCREMENT,
     productName VARCHAR (255),
     productDesc VARCHAR (255),
@@ -26,5 +27,6 @@ CREATE TABLE cart (
     productPrice DECIMAL,
     productImage VARCHAR(255),
     productQuantity INT,
+    productInCart BOOLEAN,
     PRIMARY KEY (id)
 );

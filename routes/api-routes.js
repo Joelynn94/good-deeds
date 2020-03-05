@@ -62,6 +62,18 @@ module.exports = function(app) {
     })
   })
 
+  app.post("/api/cart", function(req, res) {
+    const donateReq = req.body;
+    console.log(donateReq)
+    db.Product.create({
+      productName: donateReq.productName,
+      productPrice: donateReq.productPrice, 
+      productCategory: donateReq.productCategory, 
+      productQuantity: donateReq.productQuantity, 
+    }).then(function(data) {
+      res.json(data);
+    })
+  })
   
   app.get("/", function(req, res) {
     db.Product.findAll()
@@ -71,3 +83,4 @@ module.exports = function(app) {
       })
   })
 };
+
