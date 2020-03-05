@@ -68,21 +68,13 @@ module.exports = function(app) {
     db.Product.create({
       productName: donateReq.productName,
       productPrice: donateReq.productPrice, 
-<<<<<<< HEAD
       productCategory: donateReq.productCategory,
-=======
-      productCategory: donateReq.productCategory, 
->>>>>>> 844efd865555476b41f6ef077af7385eb2c12497
       productQuantity: donateReq.productQuantity, 
     }).then(function(data) {
       res.json(data);
     })
   })
-<<<<<<< HEAD
-
-=======
   
->>>>>>> 844efd865555476b41f6ef077af7385eb2c12497
   app.get("/", function(req, res) {
     db.Product.findAll()
       .then(function(data) {
