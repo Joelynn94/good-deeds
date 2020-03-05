@@ -1,6 +1,6 @@
 CREATE DATABASE goodDeeds_DB;
 
-CREATE TABLE  product (
+CREATE TABLE  products (
     id INT NOT NULL AUTO_INCREMENT,
     productName VARCHAR (255),
     productDesc VARCHAR (255),

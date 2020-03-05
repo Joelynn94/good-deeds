@@ -33,6 +33,10 @@ module.exports = function(sequelize, DataTypes) {
       productQuantity: {
           type: DataTypes.INTEGER,
           allowNull: false
+      },
+      productInCart: {
+        type: DataTypes.BOOLEAN,
+        defaultValue: false
       }
     });
   
