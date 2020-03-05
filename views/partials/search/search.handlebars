@@ -11,26 +11,12 @@
 </div>
 
 <div class="search">
-    <input class="form-control form-control-dark" type="text" placeholder="Search" aria-label="Search">
-    <div class="input-group-prepend">
+    <input class="form-control form-control-dark" id="search" type="text" placeholder="Search" aria-label="Search">
+    <div class="input-group-prepend" id="search_products" style="cursor: pointer;">
       <span><i class="fal fa-search"></i></span>
     </div>
 </div>
 
-{{!-- dropdown --}}
-{{!-- <script>
-  $(document).ready(function () { 
-    $("#category").change(function() {
-     var selectedOption = $(this).val() 
-     $(".grid-container-products").empty()
-     {{Product.findAll({where:{
-        productCategory:selectedOption 
-       }
-     }).then(function (res) {
 
-
-     })
-     }}
-    }
-  }) 
-</script> --}}
+<script src="js/search.js">
+</script>

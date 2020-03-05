@@ -1,6 +1,8 @@
 // Requiring our models and passport as we've configured it
 var db = require("../models");
 var passport = require("../config/passport");
+var Sequelize = require("sequelize");
+var Op = Sequelize.Op;
 
 module.exports = function(app) {
   // Using the passport.authenticate middleware with our local strategy.
@@ -63,11 +65,55 @@ module.exports = function(app) {
   })
 
   
-  app.get("/", function(req, res) {
-    db.Product.findAll()
+  
+app.get("/", function(req, res) {
+  const {cat, search } = req.query;
+  if(cat && search){
+      db.Product.findAll({ 
+        where: {
+          productCategory: {
+              [Op.like]: `%${cat}%`
+          },
+          productName: {
+              [Op.like]: `%${search}%`
+          }
+        } 
+      })
       .then(function(data) {
-        //console.log(data[0].dataValues)
         res.render('index', { Product: data })
       })
+
+  } else if(cat === undefined && search){
+    db.Product.findAll({ 
+      where: {
+        productName: {
+            [Op.like]: `%${search}%`
+        }
+      } 
+    })
+    .then(function(data) {
+      res.render('index', { Product: data })
+    })
+
+} else if(cat && search=== undefined){
+  db.Product.findAll({ 
+    where: {
+      productCategory: {
+          [Op.like]: `%${cat}%`
+      }
+    } 
   })
+  .then(function(data) {
+    res.render('index', { Product: data })
+  })
+
+} else {
+
+    db.Product.findAll()
+    .then(function(data) {
+      res.render('index', { Product: data })
+    })
+  }
+
+});
 };
