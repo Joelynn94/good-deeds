@@ -75,6 +75,7 @@ module.exports = function(app) {
       }
     })
       .then(function(data) {
+        console.log(req.session.cart)
         if (req.session.cart) {
           req.session.cart.push(data)
         } else {
@@ -87,11 +88,19 @@ module.exports = function(app) {
 
   // Get route for retrieving a single product
   app.get("/api/cart/:id", function(req, res) {
-    db.Product.findOne({
+    db.Cart.findOne({
       where: {
         id: req.params.id
       }
     })
+      .then(function(data) {
+        res.json(data);
+      });
+  });
+
+  // Get route for retrieving a all products
+  app.get("/api/cart/", function(req, res) {
+    db.Product.findAll({ })
       .then(function(data) {
         res.json(data);
       });
@@ -105,10 +114,11 @@ module.exports = function(app) {
       }
     })
       .then(function(data) {
+        console.log(data)
         if (req.session.cart) {
-          req.session.cart.delete(data)
+          req.session.cart.remove(data)
         }
-
+        console.log(req.session.cart)
         res.json(data);
       });
   });
@@ -143,7 +153,7 @@ app.get("/", function(req, res) {
       res.render('index', { Product: data })
     })
 
-} else if(cat && search=== undefined){
+} else if(cat && search === undefined){
   db.Product.findAll({ 
     where: {
       productCategory: {

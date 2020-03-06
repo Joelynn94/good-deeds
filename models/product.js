@@ -11,29 +11,29 @@ module.exports = function(sequelize, DataTypes) {
     const Product = sequelize.define("Product", {
       // Giving the Product model a name of type STRING
       productName: {
-          type: DataTypes.STRING,
-          allowNull: false
+        type: DataTypes.STRING,
+        allowNull: false
       },
       productImage: {
-          type: DataTypes.STRING,
-          allowNull: true
+        type: DataTypes.STRING,
+        allowNull: true
       },
       productDesc: {
-          type: DataTypes.TEXT,
-          allowNull: true,
-          defaultValue: "No Description"
+        type: DataTypes.TEXT,
+        allowNull: true,
+        defaultValue: "No Description"
       },
       productPrice: {
-          type: DataTypes.DECIMAL(10, 2),
-          allowNull: false
+        type: DataTypes.DECIMAL(10, 2),
+        allowNull: false
       },
       productCategory: {
-          type: DataTypes.STRING,
-          allowNull: false
+        type: DataTypes.STRING,
+        allowNull: false
       },
       productQuantity: {
-          type: DataTypes.INTEGER,
-          allowNull: false
+        type: DataTypes.INTEGER,
+        allowNull: false
       },
       productInCart: {
         type: DataTypes.BOOLEAN,

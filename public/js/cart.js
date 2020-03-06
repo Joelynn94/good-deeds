@@ -1,5 +1,5 @@
 
-// Submits a new post and brings user to blog page upon completion
+// Updates items in cart
 function addToCart(id) {
   $.ajax({
     method: 'PUT',
@@ -17,7 +17,7 @@ $('.container').on("click", '.card__btn', function() {
 })
 
 
-// Deletes an itme in the cart
+// Deletes an item in the cart
 function removeFromCart(id) {
   $.ajax({
     method: 'DELETE',
