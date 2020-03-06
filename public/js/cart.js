@@ -1,25 +1,37 @@
-const cart = localStorage.getItem('cart') || []
 
 // Submits a new post and brings user to blog page upon completion
-function submitPost(id) {
+function addToCart(id) {
   $.ajax({
     method: 'PUT',
     url: `/api/cart/${id}`
-  }).then(console.log)
+  }).then(function(data){
+    console.log(data)
+  })
 }
-
-console.log($('.container'))
 
 $('.container').on("click", '.card__btn', function() {
   console.log('RAN CLICK')
   console.log($(this).data('id'))
 
-  submitPost($(this).data('id'))
-  // addToCart.map((cart) => {
-  //   let id = cart.id === id;
-  //   console.log(id)
-  //   submitPost(id);
-  //   return id.find(id)
-  // })
+  addToCart($(this).data('id'))
 })
 
+
+// Deletes an itme in the cart
+function removeFromCart(id) {
+  $.ajax({
+    method: 'DELETE',
+    url: `/api/cart/${id}`
+  }).then(function(data){
+    console.log(data)
+  })
+}
+
+$('.container').on("click", '.remove-item', function() {
+  console.log('RAN DELETE')
+  console.log($(this).data('id'))
+
+  ('#removeDiv').remove();
+
+  removeFromCart($(this).data('id'))
+})

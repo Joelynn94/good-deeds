@@ -65,9 +65,8 @@ module.exports = function(app) {
     })
   })
 
-  // POST route for posting a product
+  // UPDATE route for adding a product to the cart
   app.put("/api/cart/:id", function(req, res) {
-    const donateReq = req.body;
     db.Product.findOne({
       where: {
         id: req.params.id
@@ -92,6 +91,22 @@ module.exports = function(app) {
       }
     })
       .then(function(data) {
+        res.json(data);
+      });
+  });
+
+  // Delete route to delete an item in the cart
+  app.delete("/api/cart/:id", function(req, res) {
+    db.Product.destroy({
+      where: {
+        id: req.params.id
+      }
+    })
+      .then(function(data) {
+        if (req.session.cart) {
+          req.session.cart.delete(data)
+        }
+
         res.json(data);
       });
   });

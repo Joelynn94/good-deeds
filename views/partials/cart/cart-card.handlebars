@@ -1,4 +1,4 @@
-<div class="product-inner mb-2"> 
+<div class="product-inner mb-2" id="removeDiv"> 
   {{!-- Product Image --}}
   <div class="product-image">
     <a href="">
@@ -23,7 +23,7 @@
   {{!-- End Product Quantity --}}
   {{!-- Product Remove --}}
   <div class="product-remove">
-    <a href="/cart"><i class="fal fa-trash trash-red"></i></a>
+  <button class="remove-item" data-id={{dataValues.id}}><i class="fal fa-trash trash-red"></i></button>
   </div>
   {{!-- End Product Remove --}}
   {{!-- Product total --}}

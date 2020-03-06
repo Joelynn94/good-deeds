@@ -4,8 +4,8 @@
 </nav>
 {{!-- End Navigation --}}
 
-{{!-- Container --}}
-<div class="container">
+{{!-- Shopping Cart --}}
+<main class="container">
   <h1 class="text-center mb-4">Your Cart</h1>
 
   {{!-- Product Headings --}}
@@ -48,12 +48,9 @@
     {{#each products}}
       {{> cart/cart-card}}
     {{/each}}
+  </div>
   {{!-- End Product Row --}}
-</div>
-{{!-- End Container --}}
 
-
-<div class="container">
   <div class="cart-details">
     <a href="">
       <button type="button" class="btn btn-outline-danger wide-btn">Clear Cart</button>
@@ -61,5 +58,7 @@
 
     <p><strong>Cart Total: $</strong><span>19.98</span></p>
   </div>
-</div>
+
+  {{!-- End Shopping Cart --}}
+</main>
 

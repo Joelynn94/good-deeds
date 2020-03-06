@@ -1,29 +1,20 @@
-{{!-- Navigation --}}
-<nav class="nav grid-container-navigation">
-  {{> nav/navigation }}
-</nav>
-{{!-- End Navigation --}}
 
-{{!-- Search Input --}}
-<div class="container">
+  {{!-- Navigation --}}
+  <nav class="nav grid-container-navigation">
+    {{> nav/navigation }}
+  </nav>
+  {{!-- End Navigation --}}
+
+<main class="container">
+  {{!-- Search Input --}}
   <div class="grid-container-search">
     {{> search/search }}
   </div>
-</div>
-{{!-- End Search Input --}}
+  {{!-- End Search Input --}}
 
-{{!-- Product Card --}}
-<div class="container">
+  {{!-- Product Card --}}
   <div class="grid-container-products">
     {{> card/card }}
-
-    
-    {{!-- {{> card/card2 }}
-
-    {{> card/card3 }} --}}
-    {{!-- dropdown --}}
-
-
   </div>
-</div>
-{{!-- End Product Cards --}}
+  {{!-- End Product Cards --}}
+</main>
