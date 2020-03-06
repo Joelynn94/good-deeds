@@ -1,3 +1,4 @@
+use goodDeeds_DB;
 INSERT INTO products
 (productName, productImage, productDesc, productPrice, productCategory, productQuantity, productInCart)
 VALUES
