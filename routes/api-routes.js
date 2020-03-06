@@ -53,7 +53,7 @@ module.exports = function(app) {
   });
 
   // Route to post new Products
-  app.post("/api/donations", isAuthenticated, function(req, res) {
+  app.post("/api/donations", function(req, res) {
     const donateReq = req.body;
     console.log(donateReq)
     db.Product.create({
@@ -68,7 +68,7 @@ module.exports = function(app) {
   })
 
   // UPDATE route for adding a product to the cart
-  app.put("/api/cart/:id", isAuthenticated, function(req, res) {
+  app.put("/api/cart/:id", function(req, res) {
     db.Product.findOne({
       where: {
         id: req.params.id
@@ -86,7 +86,7 @@ module.exports = function(app) {
   });
 
   // Get route for retrieving a single product
-  app.get("/api/cart/:id", isAuthenticated, function(req, res) {
+  app.get("/api/cart/:id", function(req, res) {
     db.Product.findOne({
       where: {
         id: req.params.id
@@ -98,7 +98,7 @@ module.exports = function(app) {
   });
 
   // Delete route to delete an item in the cart
-  app.delete("/api/cart/:id", isAuthenticated, function(req, res) {
+  app.delete("/api/cart/:id", function(req, res) {
     db.Product.destroy({
       where: {
         id: req.params.id

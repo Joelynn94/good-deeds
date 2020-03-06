@@ -12,17 +12,17 @@ router.get('/', function(req, res) {
   res.render('index');
 });
 
-router.get('/cart', isAuthenticated, function(req, res) {
+router.get('/cart', function(req, res) {
   res.render('cart', { products: req.session.cart });
 });
 
 // Here is the route for the donate form
-router.get('/donate', isAuthenticated, function(req, res) {
+router.get('/donate', function(req, res) {
   res.render('donate');
 });
 
 // Here is the route for the details form
-router.get('/details', isAuthenticated, function(req, res) {
+router.get('/details', function(req, res) {
   res.render('details');
 });
 
