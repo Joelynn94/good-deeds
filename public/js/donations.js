@@ -1,3 +1,5 @@
+// LORNA get this to work and post to the index
+
 $(document).ready(function() {
     // Getting references to our form and inputs
     // everyform element id
@@ -21,7 +23,7 @@ $(document).ready(function() {
         productImage:imageUpload.val(),
         productQuantity:quantity.val()
       };
-      console.log(userDonation.productName)
+      console.log(userDonation.productName);
    // If we have an email and password we run the loginUser function and clear the form
       addDonation(userDonation.description);
       itemDescription.val("");
