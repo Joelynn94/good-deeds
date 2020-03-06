@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "d3v3l0p3r",
+    "password": "",
     "database": "goodDeeds_DB",
     "host": "127.0.0.1",
     "dialect": "mysql"
