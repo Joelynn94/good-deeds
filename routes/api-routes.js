@@ -1,3 +1,4 @@
+// LORNA get the routes to work but am posting to the index not sure what route we need
 // Requiring our models and passport as we've configured it
 var db = require("../models");
 var passport = require("../config/passport");
