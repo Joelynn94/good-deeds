@@ -1,14 +1,11 @@
 module.exports = function(sequelize, DataTypes) {
     var Cart = sequelize.define("Cart", {
-      img: {
-        type: DataTypes.STRING,
+      quantity: {
+        type: DataTypes.INTEGER,
         allowNull: false,
-        validate: {}
-      },
-      desc: {
-        type: DataTypes.TEXT,
-        allowNull: false,
-        len: [1]
+        validate: {
+          len: [1, 10]
+        }
       }
     });
   
@@ -20,8 +17,9 @@ module.exports = function(sequelize, DataTypes) {
           allowNull: false
         }
       });
-      
+      Cart.belongsTo(models.Product, {
+          //
+      });
     };
-  
     return Cart;
   };

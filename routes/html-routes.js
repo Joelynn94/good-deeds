@@ -1,6 +1,7 @@
 // Require Express 
 const express = require("express");
-
+//Creates isAuthenticated requirement to access restricted pages
+const isAuthenticated = require("../config/middleware/isAuthenticated");
 // Requiring path to so we can use relative routes to our HTML files
 const path = require("path");
 
@@ -11,17 +12,17 @@ router.get('/', function(req, res) {
   res.render('index');
 });
 
-router.get('/cart', function(req, res) {
+router.get('/cart', isAuthenticated, function(req, res) {
   res.render('cart', { products: req.session.cart });
 });
 
 // Here is the route for the donate form
-router.get('/donate', function(req, res) {
+router.get('/donate', isAuthenticated, function(req, res) {
   res.render('donate');
 });
 
 // Here is the route for the details form
-router.get('/details', function(req, res) {
+router.get('/details', isAuthenticated, function(req, res) {
   res.render('details');
 });
 
