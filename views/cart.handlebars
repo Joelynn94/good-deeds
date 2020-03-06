@@ -47,7 +47,9 @@
   <div class="product-row">
     {{!-- Product Inner --}}
     <div class="product-inner">
-      {{> cart/cart-card}}
+      {{#each products}}
+        {{> cart/cart-card}}
+      {{/each}}
     {{!-- End Product Inner --}}
   </div>
   {{!-- End Product Row --}}

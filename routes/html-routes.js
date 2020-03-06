@@ -12,7 +12,7 @@ router.get('/', function(req, res) {
 });
 
 router.get('/cart', function(req, res) {
-  res.render('cart');
+  res.render('cart', { products: req.session.cart });
 });
 
 // Here is the route for the donate form
