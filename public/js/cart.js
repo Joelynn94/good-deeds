@@ -56,7 +56,6 @@ $('.container').on("click", '.remove-item', function() {
   $('#removeDiv').remove();
 })
 
-
 // Deletes all items from cart
 function removeAllItems () {
   $.ajax({
@@ -74,3 +73,23 @@ $('.container').on("click", '#clear_cart', function() {
 
   $('.product-row').remove();
 })
+
+function productTotal() {
+ // var cartItemContainer = document.getElementsByClassName('product-row')[0]
+  var cartRows = document.getElementsByClassName('product-inner')
+  var total = 0
+  for (var i = 0; i < cartRows.length; i++) {
+      var cartRow = cartRows[i]
+      var priceElement = cartRow.getElementsByClassName('row-price')[0]
+      var quantityElement = $("#cartQuantity option:selected").val()
+      var price = parseFloat(priceElement.innerText.replace('$', ''))
+      total = parseFloat(price * quantityElement) //price * quantity
+      const cartTotal = document.getElementsByClassName('row-total')[i].innerText = '$' + total
+      console.log(total)
+      console.log(cartTotal)
+
+  }
+      //total = Math.round(total * 100) / 100
+      
+}
+productTotal(/*$(this).data('id')*/)
