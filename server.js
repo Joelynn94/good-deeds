@@ -11,6 +11,23 @@ const routes = require('./routes/html-routes');
 const PORT = process.env.PORT || 8080;
 const db = require("./models");
 
+const mysql = require('mysql');
+let connection = '';
+
+if (process.env.JAWSDB_URL){
+  connection = mysql.createConnection(process.env.JAWSDB_URL);
+} else {
+  // Sets up mysql connection
+  connection = mysql.createConnection({
+    host: 'blonze2d5mrbmcgf.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
+    user: 'mkttv3f2bzkxs59x',
+    password: 'p59g74zkosaofwyh',
+    database: 'p7xx91oifm8orr9d'
+  })
+}
+
+connection.connect();
+
 // Creating express app and configuring middleware needed for authentication
 const app = express();
 app.use(express.urlencoded({ extended: true }));
