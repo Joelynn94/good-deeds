@@ -63,7 +63,9 @@
 }
 
 .wide-btn {
-  width: 180px;
+  width: 150px;
+  justify-self: end;
+  margin-bottom: 5px;
 }
 
 .trash-red {

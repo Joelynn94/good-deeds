@@ -18,7 +18,7 @@ $('.container').on("click", '.card__btn', function() {
 
 
 // Deletes an item in the cart
-function removeFromCart(id) {
+function removeItem(id) {
   $.ajax({
     method: 'DELETE',
     url: `/api/cart/${id}`
@@ -27,10 +27,30 @@ function removeFromCart(id) {
   })
 }
 
-$('.container').on("click", '.remove-item', function(e) {
+// event to remove a div 
+$('.container').on("click", '.remove-item', function() {
   console.log('RAN DELETE')
   console.log($(this).data('id'))
 
-  removeFromCart($(this).data('id'))
+  removeItem($(this).data('id'))
   $('#removeDiv').remove();
+})
+
+
+// Deletes all items from cart
+function removeAllItems () {
+  $.ajax({
+    method: 'DELETE',
+    url: `/api/cart/${id}`
+  }).then(function(data){
+    console.log(data)
+  })
+}
+
+// event to remove divs
+$('.container').on("click", '#clear_cart', function() {
+  console.log('RAN DELETE ALL')
+  console.log($(this).data('id'))
+
+  $('.product-row').remove();
 })
