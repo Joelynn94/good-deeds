@@ -12,7 +12,7 @@
         </div>
       </div>
       <div class="col-md-8">
-        <form id="donationForm">
+        <form id="donationForm" method="POST" enctype="multipart/form-data" action="/api/donations">
           <div class="form-group">
             <label for="product">Product Name:</label>
             <input type="text" class="form-control" id="title">
@@ -31,7 +31,6 @@
               <div class="form-group mt-3">
               <label for="category">Quantity:</label>
               <select class="custom-select" id="quantity">
-                <option value="optional">Optional</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
@@ -51,7 +50,7 @@
               <label for="image">Upload Donation Image:</label>
               <div class="input-group mb-3">
           <div class="custom-file">
-          <input type="file" class="custom-file-input" id="imageUpload">
+          <input type="file" class="custom-file-input" id="imageUpload" name="imageUpload">
           <label class="custom-file-label" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02">Choose file</label>
           </div>
       <div class="input-group-append">
@@ -61,8 +60,12 @@
             </div>
             <br />
             <button type="submit" class="btn btn-success submit btn-lg">Submit</button>
+
+            
           </div>
         </form>
       </div>
     </div>
   </div>
+  <script src="js/donations.js"></script>
+            <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.form/3.51/jquery.form.min.js"></script>

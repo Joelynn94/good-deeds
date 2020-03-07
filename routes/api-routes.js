@@ -86,7 +86,7 @@ module.exports = function(app) {
     })
   });
 
-  // Wokring on updating product qty 
+  // Wokring on updat
   app.put("/api/cart/:id", function(req, res) {
     db.Product.findOne({
       where: {
