@@ -56,6 +56,7 @@ $('.container').on("click", '.remove-item', function() {
 
   removeItem($(this).data('id'))
   $('#removeDiv').remove();
+  // document.querySelector('#cart-total').textContent = 0
 })
 
 // Deletes all items from cart
