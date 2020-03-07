@@ -1,0 +1,63 @@
+{{!-- Navigation --}}
+<nav class="nav grid-container-navigation">
+  {{> nav/navigation }}
+</nav>
+{{!-- End Navigation --}}
+
+{{!-- Shopping Cart --}}
+<main class="container">
+  <h1 class="text-center mb-4">Your Cart</h1>
+
+  {{!-- Product Headings --}}
+  <div class="product-inner-headings">
+    {{!-- Product Image --}}
+    <div class="product-image-heading">
+      <h5>Products</h5>
+    </div>
+    {{!-- End Product Image --}}
+    {{!-- Product Price --}}
+    <div class="product-name-heading">
+      <h5>Product</h5>
+    </div>
+    {{!-- End Product Price --}}
+    {{!-- Product Price --}}
+    <div class="product-price-heading">
+      <h5>Price</h5>
+    </div>
+    {{!-- End Product Price --}}
+    {{!-- Product Quantity --}}
+    <div class="product-qty-heading">
+      <h5>Quantity</h5>
+    </div>
+    {{!-- End Product Quantity --}}
+    {{!-- Product Remove --}}
+    <div class="product-remove-heading">
+      <h5>Remove</h5>
+    </div>
+    {{!-- End Product Remove --}}
+    {{!-- Product total --}}
+    <div class="product-total-heading"
+      <h5>Total</h5>
+    </div>
+    {{!-- End Product Total --}}
+  </div>
+  {{!-- End Product Headings --}}
+
+  {{!-- Product Row --}}
+  <div class="product-row">
+    {{#each products}}
+      {{> cart/cart-card}}
+    {{/each}}
+  </div>
+  {{!-- End Product Row --}}
+
+  <div class="cart-details">
+    <button id="clear_cart" type="button" class="btn btn-outline-danger wide-btn">Clear Cart</button> 
+    
+    <p><strong>Cart Total: $</strong><span id="cart-total"></span></p>
+    
+  </div>
+
+  {{!-- End Shopping Cart --}}
+</main>
+

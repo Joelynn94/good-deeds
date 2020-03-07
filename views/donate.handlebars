@@ -1,0 +1,73 @@
+{{!-- Navigation --}}
+<nav class="nav grid-container-navigation">
+  {{> nav/navigation }}
+</nav>
+{{!-- End Navigation --}}
+
+<div class="container">
+    <div class="row">
+      <div class="row">
+        <div class="col-sm-2 mt-4">
+          <a class="btn btn-light" href="/">Back to Products</a>
+        </div>
+      </div>
+      <div class="col-md-8">
+        <form id="donationForm" method="POST" enctype="multipart/form-data" action="/api/donations">
+          <div class="form-group">
+            <label for="product">Product Name:</label>
+            <input type="text" class="form-control" id="title">
+            <br />
+            <label for="description">Description:</label>
+            <textarea class="form-control" rows="10" id="desc"></textarea>
+            <div class="form-group mt-3">
+              <label for="category">Select Category:</label>
+              <select class="custom-select" id="categoryDonate">
+                <option value="school supplies">School Supplies</option>
+                <option value="shoes">Shoes</option>
+                <option value="personal hygiene ">Personal Hygiene</option>
+                <option value="professional outfits">Professional Outfits</option>
+                <option value="winter clothes">Winter Clothes</option>
+                <option value="Miscellaneous">Miscellaneous</option>
+
+              </select>
+              <div class="form-group mt-3">
+              <label for="category">Quantity:</label>
+              <select class="custom-select" id="quantity">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+              </select>
+              <br />
+              <br />
+              <label for="price">Price:</label>
+            <input type="text" class="form-control" id="price">
+            <br />
+              <label for="image">Upload Donation Image:</label>
+              <div class="input-group mb-3">
+          <div class="custom-file">
+          <input type="file" class="custom-file-input" id="imageUpload" name="imageUpload">
+          <label class="custom-file-label" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02">Choose file</label>
+          </div>
+      <div class="input-group-append">
+    <span class="input-group-text" id="inputGroupFileAddon02">Upload</span>
+  </div>
+</div>
+            </div>
+            <br />
+            <button type="submit" class="btn btn-success submit btn-lg">Submit</button>
+
+            
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script src="js/donations.js"></script>
+            <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.form/3.51/jquery.form.min.js"></script>

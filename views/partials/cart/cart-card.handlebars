@@ -1,0 +1,45 @@
+<div class="product-inner mb-2" id="removeDiv"> 
+  {{!-- Product Image --}}
+  <div class="product-image">
+    <a href="">
+      <img src="{{productImage}}" alt="">
+    </a>
+  </div>
+  {{!-- End Product Image --}}
+  {{!-- Product Price --}}
+  <div class="product-name">
+    <p>{{productName}}</p>
+  </div>
+  {{!-- End Product Price --}}
+  {{!-- Product Price --}}
+  <div class="product-price">
+    <p class="row-price">{{productPrice}}</p>
+  </div>
+  {{!-- End Product Price --}}
+  {{!-- Product Quantity --}}
+  <div class="product-qty">
+    <select class="custom-select" id="cartQuantity">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6</option>
+      <option value="7">7</option>
+      <option value="8">8</option>
+      <option value="9">9</option>
+      <option value="10">10</option>
+    </select>
+  </div>
+  {{!-- End Product Quantity --}}
+  {{!-- Product Remove --}}
+  <div class="product-remove">
+  <button class="remove-item" data-id={{id}}><i class="fal fa-trash trash-red"></i></button>
+  </div>
+  {{!-- End Product Remove --}}
+  {{!-- Product total --}}
+  <div class="product-total">
+    <p><strong class="row-total">{{productPrice}}</strong></p>
+  </div>
+  {{!-- End Product Total --}}
+</div> 
