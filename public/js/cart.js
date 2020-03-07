@@ -67,10 +67,28 @@ function productTotal() {
       var price = parseFloat(priceElement.innerText.replace('$', ''))
       var quantity = quantityElement.value
       total = parseFloat(price) //price * quantity
-      document.getElementsByClassName('row-total')[i].innerText = '$' + total
+      document.getElementsByClassName('product-total')[i].innerText = total
+      
       //console.log(total)
   }
       //total = Math.round(total * 100) / 100
       
 }
 productTotal(/*$(this).data('id')*/)
+
+function cartTotal() {
+  var proTotals = document.getElementsByClassName('product-inner')[0];
+  //var rowsTotal = parseFloat(rowsTotal)
+  var total = 0
+  for (var i = 0; i < proTotals.length; i++) {
+    var proTotal = proTotals[i];
+    //var totalElement = proTotal.getElementsByClassName('product-total')[i];
+    //var total = totalElement.innerText;
+    //total = parseFloat(total)
+    
+    
+  }
+  console.log("help")
+    
+}
+cartTotal()
