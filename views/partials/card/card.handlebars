@@ -1,10 +1,10 @@
 {{#each Product}}
   <div class="card">
     <div class="position-relative">
-      <img class="card-img" data-img={{dataValues.productImage}} src="/img/backpack.jpeg" alt="Backpack">
+      <img class="card-img" data-img={{dataValues.productImage}} src={{dataValues.productImage}} alt="Backpack">
       <div class="card-cart">
         <li>
-          <button class="card__btn" data-id={{dataValues.id}}><i class="fal fa-shopping-cart cart-black"></i><span class="cart-span">Add to Cart</span></button>
+          <button class="card__btn btn" data-id={{dataValues.id}}><i class="fal fa-shopping-cart cart-black"></i><span class="cart-span">Add to Cart</span></button>
         </li>
       </div>
     </div>

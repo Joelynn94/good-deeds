@@ -112,11 +112,10 @@ img {
 .card-cart {
   background-color: #fff;
   position: absolute;
-  bottom: -8px;
-  right: 31%;
+  bottom: -10px;
+  right: 28%;
   border-radius: 5px; /* 5px rounded corners */
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  padding: .25rem .5rem;
 }
 
 .cart-span,

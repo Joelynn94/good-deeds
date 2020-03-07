@@ -7,6 +7,20 @@ var Op = Sequelize.Op;
 //Creates requirement of isAuthenticated for restricted access
 const isAuthenticated = require("../config/middleware/isAuthenticated");
 
+var multer  = require('multer')
+var storage = multer.diskStorage({
+  destination: function(req, file, cb) {
+      cb(null, './public/img');
+   },
+  filename: function (req, file, cb) {
+    const filename = file.originalname.toLowerCase()
+      cb(null ,  Date.now() + '-' + filename.replace(/ /g,''));
+  }
+}); 
+// var upload = multer({ dest: 'uploads/' })
+var upload = multer({ storage: storage })
+
+
 module.exports = function(app) {
   // Using the passport.authenticate middleware with our local strategy.
   // If the user has valid login credentials, send them to the members page.
@@ -53,18 +67,21 @@ module.exports = function(app) {
   });
 
   // Route to post new Products
-  app.post("/api/donations", function(req, res) {
+  app.post('/api/donations', upload.single('imageUpload'), function (req, res, next) {
     const donateReq = req.body;
-    console.log(donateReq)
+    console.log("donateReq", donateReq)
+    console.log('Uploaded: ', req.file.filename);
+
     db.Product.create({
       productName: donateReq.productName,
       productDesc: donateReq.productDesc, 
       productPrice: donateReq.productPrice, 
       productCategory: donateReq.productCategory, 
       productQuantity: donateReq.productQuantity, 
+      productImage: "img/" + req.file.filename,
     }).then(function(data) {
       res.json(data);
-    })
+    });
   })
 
   // UPDATE route for adding a product to the cart
@@ -74,16 +91,36 @@ module.exports = function(app) {
         id: req.params.id
       }
     })
-      .then(function(data) {
-        console.log(req.session.cart)
-        if (req.session.cart) {
-          req.session.cart.push(data)
-        } else {
-          req.session.cart = [data]
-        }
+    .then(function(data) {
+      console.log(req.session.cart)
+      if (req.session.cart) {
+        req.session.cart.push(data)
+      } else {
+        req.session.cart = [data]
+      }
 
-        res.json(data)
-      })
+      res.json(data)
+    })
+  });
+
+  // Wokring on updat
+  app.put("/api/cart/:id", function(req, res) {
+    db.Product.findOne({
+      where: {
+        id: req.params.id,
+        productQuantity: req.params.productQuantity
+      }
+    })
+    .then(function(data) {
+      console.log(req.session.cart)
+      if (req.session.cart) {
+        req.session.cart.push(data)
+      } else {
+        req.session.cart = [data]
+      }
+
+      res.json(data)
+    })
   });
 
   // Get route for retrieving a single product
@@ -159,7 +196,7 @@ app.get("/", function(req, res) {
     res.render('index', { Product: data })
   })
 
-} else {
+  } else {
 
     db.Product.findAll()
     .then(function(data) {
