@@ -74,6 +74,7 @@ $('.container').on("click", '#clear_cart', function() {
   console.log($(this).data('id'))
 
   $('.product-row').remove();
+  $('#cart-total').empty()
 })
 
 function productTotal() {
