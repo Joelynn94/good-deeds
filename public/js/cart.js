@@ -16,6 +16,26 @@ $('.container').on("click", '.card__btn', function() {
   addToCart($(this).data('id'))
 })
 
+// Updates items in cart
+function changeProductQty(id, qty) {
+  $.ajax({
+    method: 'PUT',
+    url: `/api/cart/${id}`,
+    productQuantity: qty
+  }).then(function (data){
+    console.log(data)
+  })
+}
+
+$('.container').on("click", '#cartQuantity', function() {
+  console.log('RAN QTY Update')
+  const qty = $("#cartQuantity option:selected").val();
+
+  console.log(qty)
+
+  changeProductQty($(this).data('id'), qty)
+})
+
 
 // Deletes an item in the cart
 function removeItem(id) {

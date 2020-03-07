@@ -74,16 +74,36 @@ module.exports = function(app) {
         id: req.params.id
       }
     })
-      .then(function(data) {
-        console.log(req.session.cart)
-        if (req.session.cart) {
-          req.session.cart.push(data)
-        } else {
-          req.session.cart = [data]
-        }
+    .then(function(data) {
+      console.log(req.session.cart)
+      if (req.session.cart) {
+        req.session.cart.push(data)
+      } else {
+        req.session.cart = [data]
+      }
 
-        res.json(data)
-      })
+      res.json(data)
+    })
+  });
+
+  // Wokring on updating product qty 
+  app.put("/api/cart/:id", function(req, res) {
+    db.Product.findOne({
+      where: {
+        id: req.params.id,
+        productQuantity: req.params.productQuantity
+      }
+    })
+    .then(function(data) {
+      console.log(req.session.cart)
+      if (req.session.cart) {
+        req.session.cart.push(data)
+      } else {
+        req.session.cart = [data]
+      }
+
+      res.json(data)
+    })
   });
 
   // Get route for retrieving a single product
@@ -159,7 +179,7 @@ app.get("/", function(req, res) {
     res.render('index', { Product: data })
   })
 
-} else {
+  } else {
 
     db.Product.findAll()
     .then(function(data) {
