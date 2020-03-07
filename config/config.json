@@ -1,9 +1,9 @@
 {
   "development": {
-    "username": "root",
-    "password": "root",
-    "database": "goodDeeds_DB",
-    "host": "127.0.0.1",
+    "username": "mkttv3f2bzkxs59x",
+    "password": "p59g74zkosaofwyh",
+    "database": "p7xx91oifm8orr9d",
+    "host": "blonze2d5mrbmcgf.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
     "dialect": "mysql"
   },
   "test": {
@@ -14,10 +14,10 @@
     "dialect": "mysql"
   },
   "production": {
-    "username": "root",
-    "password": null,
-    "database": "database_production",
-    "host": "127.0.0.1",
+    "username": "mkttv3f2bzkxs59x",
+    "password": "p59g74zkosaofwyh",
+    "database": "p7xx91oifm8orr9d",
+    "host": "blonze2d5mrbmcgf.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
     "dialect": "mysql"
   }
 }
