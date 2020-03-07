@@ -88,7 +88,7 @@ module.exports = function(app) {
 
   // Get route for retrieving a single product
   app.get("/api/cart/:id", function(req, res) {
-    db.Cart.findOne({
+    db.Product.findOne({
       where: {
         id: req.params.id
       }
@@ -96,19 +96,11 @@ module.exports = function(app) {
       .then(function(data) {
         res.json(data);
       });
-  });
-
-  // Get route for retrieving a all products
-  app.get("/api/cart/", function(req, res) {
-    db.Product.findAll({ })
-      .then(function(data) {
-        res.json(data);
-      });
-  });
+  })
 
   // Delete route to delete an item in the cart
   app.delete("/api/cart/:id", function(req, res) {
-    db.Product.destroy({
+    db.Product.findOne({
       where: {
         id: req.params.id
       }
@@ -116,7 +108,9 @@ module.exports = function(app) {
       .then(function(data) {
         console.log(data)
         if (req.session.cart) {
-          req.session.cart.remove(data)
+          req.session.cart = []
+        } else {
+          req.session.cart = [data]
         }
         console.log(req.session.cart)
         res.json(data);

@@ -27,11 +27,10 @@ function removeFromCart(id) {
   })
 }
 
-$('.container').on("click", '.remove-item', function() {
+$('.container').on("click", '.remove-item', function(e) {
   console.log('RAN DELETE')
   console.log($(this).data('id'))
 
-  ('#removeDiv').remove();
-
   removeFromCart($(this).data('id'))
+  $('#removeDiv').remove();
 })
