@@ -103,20 +103,3 @@ function productTotal() {
       
 }
 productTotal($(this).data('id'))
-
-function totalUp() {
-  var proTotals = document.getElementsByClassName('product-inner')[0];
-  //var rowsTotal = parseFloat(rowsTotal)
-  var total = 0
-  for (var i = 0; i < proTotals.length; i++) {
-    var proTotal = proTotals[i];
-    //var totalElement = proTotal.getElementsByClassName('product-total')[i];
-    //var total = totalElement.innerText;
-    //total = parseFloat(total)
-    
-    
-  }
-  console.log("help")
-    
-}
-totalUp()
