@@ -68,6 +68,15 @@
   margin-bottom: 5px;
 }
 
+.remove-item {
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  background:rgb(219, 59, 33);
+  color:#fff;
+  border: none;
+}
+
 .trash-red {
-  color: rgb(219, 59, 33);
+  color: #fff;
 }
