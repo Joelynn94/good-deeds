@@ -85,16 +85,24 @@ function productTotal() {
       var priceElement = cartRow.getElementsByClassName('row-price')[0]
       var quantityElement = $("#cartQuantity").val()
       var price = parseFloat(priceElement.innerText.replace('$', ''))
-      total = parseFloat(price * quantityElement) //price * quantity
+      total += parseFloat(price * quantityElement) //price * quantity
       const cartTotal = document.getElementsByClassName('row-total')[i].innerText = '$' + total
       console.log(total)
       console.log(cartTotal)
 
   }
+  
+  const formatter = new Intl.NumberFormat('en-US', {
+    style: 'currency',
+    currency: 'USD',
+    minimumFractionDigits: 2
+  })
+
+  document.querySelector('#cart-total').textContent = formatter.format(total)
       //total = Math.round(total * 100) / 100
       
 }
-productTotal(/*$(this).data('id')*/)
+productTotal($(this).data('id'))
 
 function totalUp() {
   var proTotals = document.getElementsByClassName('product-inner')[0];
