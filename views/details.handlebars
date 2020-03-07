@@ -3,13 +3,26 @@
   {{> nav/navigation }}
 </nav>
 {{!-- End Navigation --}}
+<main class="comntainer">
+  <div class="inner">
 
-<div class="media">
-  <img src="..." class="align-self-center mr-3" alt="...">
-  <div class="media-body">
-    <h5 class="mt-0">Product Details</h5>
-    <h6 class="mt-0">Price:</h6>
-    <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel ms.</p>
-    <p class="mb-0">Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+    <div class="product-image">
+      <a href="">
+        <img src="{{productImage}}" alt="">
+      </a>
+    </div>
+
+    <div class="product-name">
+      <p>{{productName}}</p>
+    </div>
+
+    <div class="product-price">
+      <p>{{productDesc}}</p>
+    </div>
+
+    <div class="product-price">
+      <p>{{productPrice}}</p>
+    </div>
+
   </div>
-</div>
+</main>

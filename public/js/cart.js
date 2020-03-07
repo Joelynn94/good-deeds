@@ -1,3 +1,5 @@
+// const cartLength = document.querySelectorAll('#removeDiv')
+// cartLength.textContent = cartLength.length;
 
 // Updates items in cart
 function addToCart(id) {
@@ -81,7 +83,7 @@ function productTotal() {
   for (var i = 0; i < cartRows.length; i++) {
       var cartRow = cartRows[i]
       var priceElement = cartRow.getElementsByClassName('row-price')[0]
-      var quantityElement = $("#cartQuantity option:selected").val()
+      var quantityElement = $("#cartQuantity").val()
       var price = parseFloat(priceElement.innerText.replace('$', ''))
       total = parseFloat(price * quantityElement) //price * quantity
       const cartTotal = document.getElementsByClassName('row-total')[i].innerText = '$' + total

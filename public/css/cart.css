@@ -47,6 +47,14 @@
   margin: 0;
 }
 
+.product-name {
+  margin-left: 25px;
+}
+
+.product-price {
+  margin-left: 22px;
+}
+
 .cart-details {
   display: grid;
   margin-top: 2rem;
@@ -75,8 +83,19 @@
   background:rgb(219, 59, 33);
   color:#fff;
   border: none;
+  margin-left: 30px;
 }
 
 .trash-red {
   color: #fff;
+}
+
+.cart-count {
+  position: absolute;
+  left: 17px;
+  top: -8px;
+  z-index: 5;
+  color:orange;
+  font-size: 1.15rem;
+  font-weight: 700;
 }

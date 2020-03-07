@@ -55,6 +55,7 @@ img {
 .nav-li {
   padding: .25rem;
   align-self: center;;
+  justify-self: center;
 }
 
 .li-neg-margin {
@@ -79,7 +80,8 @@ img {
 
 /* Center cards on mobile */
 .grid-container-products {
-  display: grid;
+  max-width: 22rem;
+  margin: 0 auto;
 }
 
 /* Product card styles */
@@ -101,6 +103,7 @@ img {
 /* Add some padding inside the card container */
 .card-text {
   padding: 2rem .5rem;
+  position: relative;
 }
 
 .card-img {
@@ -130,6 +133,17 @@ img {
   color: #3275a8;
 }
 
+.product-details {
+  position: absolute;
+  color: #3275a8;
+  right: 0;
+  bottom: 0;
+}
+
+.product-details:hover {
+  color: black
+}
+
 /* Search input styles */
 .search {
   display: flex;
@@ -157,10 +171,19 @@ img {
     grid-gap: .5rem;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
+    margin: 0;
   }
 
   .card {
     width: 20rem;
+  }
+
+  .details-btn {
+    position: absolute;
+    left: 40%;
+    bottom: 5%;
+    font-size: 1.15rem;
+    font-weight: 700;
   }
 
   .nav-left {

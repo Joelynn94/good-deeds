@@ -23,7 +23,7 @@ router.get('/donate', function(req, res) {
 
 // Here is the route for the details form
 router.get('/details', function(req, res) {
-  res.render('details');
+  res.render('details', { products: data });
 });
 
 
