@@ -86,9 +86,9 @@ function productTotal() {
       var quantityElement = $("#cartQuantity").val()
       var price = parseFloat(priceElement.innerText.replace('$', ''))
       total += parseFloat(price * quantityElement) //price * quantity
-      const cartTotal = document.getElementsByClassName('row-total')[i].innerText = '$' + total
+      const rowTotal = document.getElementsByClassName('row-total').innerText = '$' + total
       console.log(total)
-      console.log(cartTotal)
+      console.log(rowTotal)
 
   }
   
