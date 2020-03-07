@@ -56,7 +56,6 @@ $('.container').on("click", '.remove-item', function() {
   $('#removeDiv').remove();
 })
 
-<<<<<<< HEAD
 function productTotal() {
  // var cartItemContainer = document.getElementsByClassName('product-row')[0]
   var cartRows = document.getElementsByClassName('product-inner')
@@ -75,23 +74,3 @@ function productTotal() {
       
 }
 productTotal(/*$(this).data('id')*/)
-=======
-
-// Deletes all items from cart
-function removeAllItems () {
-  $.ajax({
-    method: 'DELETE',
-    url: `/api/cart/${id}`
-  }).then(function(data){
-    console.log(data)
-  })
-}
-
-// event to remove divs
-$('.container').on("click", '#clear_cart', function() {
-  console.log('RAN DELETE ALL')
-  console.log($(this).data('id'))
-
-  $('.product-row').remove();
-})
->>>>>>> 610db7bc69f8a1893f395586e680ff35ee7ba7e2
