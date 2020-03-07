@@ -56,6 +56,24 @@ $('.container').on("click", '.remove-item', function() {
   $('#removeDiv').remove();
 })
 
+// Deletes all items from cart
+function removeAllItems () {
+  $.ajax({
+    method: 'DELETE',
+    url: `/api/cart/${id}`
+  }).then(function(data){
+    console.log(data)
+  })
+}
+
+// event to remove divs
+$('.container').on("click", '#clear_cart', function() {
+  console.log('RAN DELETE ALL')
+  console.log($(this).data('id'))
+
+  $('.product-row').remove();
+})
+
 function productTotal() {
  // var cartItemContainer = document.getElementsByClassName('product-row')[0]
   var cartRows = document.getElementsByClassName('product-inner')
@@ -63,20 +81,20 @@ function productTotal() {
   for (var i = 0; i < cartRows.length; i++) {
       var cartRow = cartRows[i]
       var priceElement = cartRow.getElementsByClassName('row-price')[0]
-      var quantityElement = cartRow.getElementsByClassName('row-quantity')[0]
+      var quantityElement = $("#cartQuantity option:selected").val()
       var price = parseFloat(priceElement.innerText.replace('$', ''))
-      var quantity = quantityElement.value
-      total = parseFloat(price) //price * quantity
-      document.getElementsByClassName('product-total')[i].innerText = total
-      
-      //console.log(total)
+      total = parseFloat(price * quantityElement) //price * quantity
+      const cartTotal = document.getElementsByClassName('row-total')[i].innerText = '$' + total
+      console.log(total)
+      console.log(cartTotal)
+
   }
       //total = Math.round(total * 100) / 100
       
 }
 productTotal(/*$(this).data('id')*/)
 
-function cartTotal() {
+function totalUp() {
   var proTotals = document.getElementsByClassName('product-inner')[0];
   //var rowsTotal = parseFloat(rowsTotal)
   var total = 0
@@ -91,4 +109,4 @@ function cartTotal() {
   console.log("help")
     
 }
-cartTotal()
+totalUp()
