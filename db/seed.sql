@@ -1,5 +1,5 @@
 use goodDeeds_DB;
-INSERT INTO products
+INSERT INTO Products
 (productName, productImage, productDesc, productPrice, productCategory, productQuantity, productInCart)
 VALUES
 ('Coat', 'img/coat.jpeg', 'Winter Coat', 85.99, 'Winter Clothes', 1, false),
