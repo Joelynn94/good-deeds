@@ -1,0 +1,13 @@
+{ 
+    "env": {
+        "jquery": true
+    },
+    "extends": ["airbnb", "prettier"],
+    "plugins": ["prettier"],
+    "rules": {
+
+    },
+    "globals": {
+        "$": true
+    }
+}
