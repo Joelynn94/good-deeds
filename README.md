@@ -10,7 +10,7 @@ You will login to the homepage which will contain all products that are donated 
 ## App Demo
 
 ### Home page 
-![Home](home-good-deeds.jpg)
+![Home](home-good-deeds.png)
 
 ### Add A Product
 ![Add](add-good-deeds.png)
