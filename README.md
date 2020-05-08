@@ -10,13 +10,13 @@ You will login to the homepage which will contain all products that are donated 
 ## App Demo
 
 ### Home page 
-![Home](Home-Good Deeds.jpg)
+![Home](home-good-deeds.jpg)
 
 ### Add A Product
-![Add](Add-Good Deeds.png)
+![Add](add-good-deeds.png)
 
 ### View Cart
-![Cart](Cart-Good Deeds.png)
+![Cart](cart-good-deeds.png)
 
 # Technologies used
 * HTML
